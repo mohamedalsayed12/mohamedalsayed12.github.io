@@ -30,6 +30,6 @@ function render(repos){
 document.getElementById('year').textContent=new Date().getFullYear();render(saved);
 fetch(`https://api.github.com/users/${user}/repos?type=owner&sort=updated&per_page=100`,{headers:{Accept:'application/vnd.github+json'}})
  .then(r=>{if(!r.ok)throw Error(`GitHub ${r.status}`);return r.json()})
- .then(data=>{if(!Array.isArray(data))throw Error('Invalid GitHub data');const repos=data.filter(r=>!r.private&&!r.fork&&!r.archived);const order=new Map(names.map((n,i)=>[n,i]));repos.sort((a,b)=>(order.get(a.name)??999)-(order.get(b.name)??999));render(repos);status.textContent='Project list updated from GitHub.'})
+ .then(data=>{if(!Array.isArray(data))throw Error('Invalid GitHub data');const repos=data.filter(r=>!r.private&&!r.fork&&!r.archived&&r.name!==`${user}.github.io`);const order=new Map(names.map((n,i)=>[n,i]));repos.sort((a,b)=>(order.get(a.name)??999)-(order.get(b.name)??999));render(repos);status.textContent='Project list updated from GitHub.'})
  .catch(()=>{status.textContent='Showing the saved public project list. Visit GitHub for the latest updates.'});
 
