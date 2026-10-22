@@ -35,6 +35,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance}
 .project-tags{display:flex;flex-wrap:wrap;gap:6px}.project-tags span{font:12px var(--mono);padding:3px 10px;border:1px solid var(--line);border-radius:99px}
 .project-links{display:flex;gap:20px;margin-top:4px}.project-links a{font-weight:600;text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:1px}.project-links a:hover{color:var(--accent)}
 #project-status{margin:20px 0 0}
+.project-art.has-shot{background:#0b0d13;place-items:stretch}.project-art.has-shot:before{display:none}.project-art.has-shot img{position:relative;width:100%;height:100%;object-fit:cover;object-position:left top;display:block}.project-art.has-shot img[src*="gym-social-media"]{object-fit:contain;object-position:center}
 .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .skills>div{background:var(--surface);padding:22px;display:grid;gap:10px;align-content:start}.skills small{color:var(--accent)}
 .skills p{margin:0;display:grid;gap:4px}.skills p span{font-size:15px}

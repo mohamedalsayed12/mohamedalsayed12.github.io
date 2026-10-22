@@ -1,7 +1,7 @@
 const user='mohamedalsayed12';
 const info={
- 'gym-social-media':['Gym Social Media API','BACKEND · REST API','A gym focused social backend where users can register, publish posts, and vote. JWT authentication and ownership checks protect user content.',['Python','FastAPI','PostgreSQL','SQLAlchemy']],
- 'nutrition-tracker':['Nutrition Tracker API','BACKEND · HEALTH TOOL','An API for food and activity logs, personal goals, USDA food lookup, and daily and weekly reports.',['Python','Flask','PostgreSQL','Docker']],
+ 'gym-social-media':['Gym Social Media','FULL STACK · SOCIAL APP','A gym social app where people log workouts set by set, get automatic PR detection, follow lifters, like sessions and join communities. FastAPI backend with JWT and refresh tokens, plus a React frontend.',['Python','FastAPI','PostgreSQL','React'],'images/gym-social-media.jpg','LIFTLOG screens: feed, workout logger, profile and login'],
+ 'nutrition-tracker':['Nutrition Tracker','FULL STACK · HEALTH TOOL','Log food and activity against personalised calorie, macro and micronutrient targets. USDA food search, daily and weekly reports, and a nutrient-density score. Flask API with a React and TypeScript frontend.',['Python','Flask','PostgreSQL','React','TypeScript'],'images/nutrition-tracker.jpg','Nutrition tracker Today page: calorie ring and macro targets'],
  'whitelight-sales-bot':['White Light Sales Bot','BACKEND · BUSINESS TOOL','An early stage wholesale sales backend with role based accounts, authentication, and PostgreSQL migrations.',['Python','FastAPI','PostgreSQL','Alembic']],
  'Power-BI-project':['Data Jobs Dashboards','DATA · VISUALISATION','Interactive Power BI reports exploring data job postings, salary trends, and skills across roles and countries.',['Power BI','DAX','Data analysis']],
  'python-for-data-analysis':['Netflix Content Demand Analysis','DATA · PYTHON','A reproducible notebook that combines viewing and ratings data to explore demand, reliability, and illustrative acquisition scenarios.',['Python','Pandas','Jupyter']],
@@ -19,7 +19,7 @@ function render(repos){
  repos.forEach((repo,i)=>{
   const data=info[repo.name]||[repo.name.replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.toUpperCase()),'GITHUB · PROJECT',repo.description||'Explore this project and its source on GitHub.',repo.language?[repo.language]:[]];
   const card=document.createElement('article');card.className='project-card';
-  const art=document.createElement('div');art.className='project-art';art.innerHTML=diagram(i);const caption=document.createElement('span');caption.className='art-caption';caption.textContent=`PROJECT / ${String(i+1).padStart(2,'0')}`;art.append(caption);
+  const art=document.createElement('div');art.className='project-art';if(data[4]){art.classList.add('has-shot');const img=document.createElement('img');img.src=data[4];img.alt=data[5]||`${data[0]} homepage`;img.loading='lazy';img.decoding='async';art.append(img)}else{art.innerHTML=diagram(i)}const caption=document.createElement('span');caption.className='art-caption';caption.textContent=`PROJECT / ${String(i+1).padStart(2,'0')}`;art.append(caption);
   const body=document.createElement('div');body.className='project-body';const kind=document.createElement('span');kind.className='project-kind';kind.textContent=data[1];
   const h=document.createElement('h3');h.textContent=data[0];const p=document.createElement('p');p.textContent=data[2];
   const tags=document.createElement('div');tags.className='project-tags';data[3].forEach(t=>{const s=document.createElement('span');s.textContent=t;tags.append(s)});
