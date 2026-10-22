@@ -1,6 +1,9 @@
 const gh='https://github.com/mohamedalsayed12/';
 // Main backend projects, shown as large cards.
 const featured=[
+ {title:'White Light Lead Bot',kind:'BUSINESS PROJECT · UI DEMO',
+  text:'Lead intake for a Bahrain wholesale team: manager CSV import and manual entry, company and phone matching, existing-client exclusion, roles, PostgreSQL migrations and 36 passing CI tests. The UI demo uses sample data; the production repository is private.',
+  tags:['Python','FastAPI','PostgreSQL','JavaScript'],demo:'whitelight-lead-bot-demo/',publicSource:false},
  {repo:'gym-social-media',title:'Gym Social Media',kind:'BACKEND API · FASTAPI',
   text:'A gym social app where people log workouts set by set and the API detects personal records automatically. Feed, follows, likes and communities, with JWT access and refresh tokens, ownership checks, Alembic migrations and 40+ pytest tests in GitHub Actions.',
   tags:['Python','FastAPI','PostgreSQL','Docker'],img:'images/gym-social-media.jpg',alt:'LiftLog screens: feed, workout logger, profile and login'},
@@ -32,7 +35,7 @@ featured.forEach((p,i)=>{
  art.append(el('span','art-caption',`PROJECT / ${String(i+1).padStart(2,'0')}`));
  const body=el('div','project-body');
  const tags=el('div','project-tags');p.tags.forEach(t=>tags.append(el('span',null,t)));
- const links=el('div','project-links');links.append(linkTo(gh+p.repo,'Source ↗'));if(p.demo)links.append(linkTo(p.demo,'Live demo ↗'));
+ const links=el('div','project-links');if(p.publicSource!==false)links.append(linkTo(gh+p.repo,'Source ↗'));if(p.demo)links.append(linkTo(p.demo,'Live demo ↗'));
  body.append(el('span','project-kind',p.kind),el('h3',null,p.title),el('p',null,p.text),tags,links);
  card.append(art,body);list.append(card);
 });
