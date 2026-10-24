@@ -1,19 +1,16 @@
 const gh='https://github.com/mohamedalsayed12/';
 // Main backend projects, shown as large cards.
 const featured=[
- {title:'White Light Lead Bot',kind:'BUSINESS PROJECT · UI DEMO',
-  text:'Lead intake for a Bahrain wholesale team: manager CSV import and manual entry, company and phone matching, existing-client exclusion, roles, PostgreSQL migrations and 36 passing CI tests. The UI demo uses sample data; the production repository is private.',
-  tags:['Python','FastAPI','PostgreSQL','JavaScript'],demo:'whitelight-lead-bot-demo/',publicSource:false},
- {repo:'gym-social-media',title:'Gym Social Media',kind:'BACKEND API · FASTAPI',
-  text:'A gym social app where people log workouts set by set and the API detects personal records automatically. Feed, follows, likes and communities, with JWT access and refresh tokens, ownership checks, Alembic migrations and 40+ pytest tests in GitHub Actions.',
+ {repo:'whitelight-sales-bot',title:'White Light Sales & Lead Desk',kind:'REAL BUSINESS · FASTAPI',
+  text:'Sales tool for White Light Trading, the Bahrain wholesale company where I interned. Tally Prime stays the source of truth: stock and invoice CSV imports, orders that reserve stock, PDF quotes, cheque tracking, credit holds, a CEO daily summary and a lead desk for managers and salesmen. Role-based access, Alembic migrations and 90+ pytest tests in GitHub Actions. The demo uses sample data.',
+  tags:['Python','FastAPI','PostgreSQL','JavaScript'],demo:'whitelight-lead-bot-demo/'},
+ {repo:'gym-social-media',title:'Gym Social Media',kind:'FULL STACK · FASTAPI + REACT',
+  text:'A gym social app where people log workouts set by set and personal records are flagged automatically. Cursor-paginated feed with a fixed query count, strength rankings from Postgres window functions, follows, likes and communities, single-use refresh tokens, Docker and 50+ pytest tests in GitHub Actions with automatic deploys.',
   tags:['Python','FastAPI','PostgreSQL','Docker'],img:'images/gym-social-media.jpg',alt:'LiftLog screens: feed, workout logger, profile and login'},
- {repo:'nutrition-tracker',title:'Nutrition Tracker',kind:'BACKEND API · FLASK',
-  text:'Log food and activity against personalised calorie, macro and micronutrient targets. USDA FoodData Central search with ranked results, nutrient-density scoring and weekly reports. Layered routes, services and models, 40+ pytest tests in CI, deployed on Heroku.',
-  tags:['Python','Flask','PostgreSQL','SQLAlchemy'],img:'images/nutrition-tracker.jpg',alt:'Nutrition tracker Today page: calorie ring and macro targets',
-  demo:'https://nutrition-tracker-alsayed-90b0d9adaf0f.herokuapp.com/'},
- {repo:'whitelight-sales-bot',title:'Whitelight Sales API',kind:'IN PROGRESS · REAL BUSINESS',
-  text:'A sales backend for a wholesale trading company in Bahrain, with Tally Prime kept as the source of truth. Phase 1 is done: role-based accounts for admin, manager and salesman, a sign-up flow that cannot create admins, and 26 pytest tests in GitHub Actions.',
-  tags:['Python','FastAPI','PostgreSQL','Alembic']}
+ {repo:'nutrition-tracker',title:'Nutrition Tracker',kind:'FULL STACK · FLASK + REACT',
+  text:'Log food and activity against personalised calorie, macro and micronutrient targets. USDA FoodData Central search with ranked results, barcode scanning, logging by Siri and weekly reports, installable on a phone. Layered routes, services and models, 90+ pytest tests in CI, deployed on Heroku.',
+  tags:['Python','Flask','PostgreSQL','React'],img:'images/nutrition-tracker.jpg',alt:'Nutrition tracker Today page: calorie ring and macro targets',
+  demo:'https://nutrition-tracker-alsayed-90b0d9adaf0f.herokuapp.com/'}
 ];
 // Smaller supporting work, shown as compact cards.
 const more=[
