@@ -1,5 +1,4 @@
 const gh='https://github.com/mohamedalsayed12/';
-// Main backend projects, shown as large cards.
 const featured=[
  {repo:'whitelight-sales-bot',title:'White Light Sales & Lead Desk',kind:'REAL BUSINESS · FASTAPI',
   text:'Sales tool for White Light Trading, the Bahrain wholesale company where I interned. Tally Prime stays the source of truth: stock and invoice CSV imports, orders that reserve stock, PDF quotes, cheque tracking, credit holds, a CEO daily summary and a lead desk for managers and salesmen. Role-based access, Alembic migrations and 90+ pytest tests in GitHub Actions. The demo uses sample data.',
@@ -12,7 +11,6 @@ const featured=[
   tags:['Python','Flask','PostgreSQL','React'],img:'images/nutrition-tracker.jpg',alt:'Nutrition tracker Today page: calorie ring and macro targets',
   demo:'https://nutrition-tracker-alsayed-90b0d9adaf0f.herokuapp.com/'}
 ];
-// Smaller supporting work, shown as compact cards.
 const more=[
  {repo:'neetcode-submissions',title:'NeetCode Solutions',kind:'ALGORITHMS',text:'Data structures and algorithms practice in Python, synced to GitHub.'},
  {repo:'python-for-data-analysis',title:'Netflix Demand Analysis',kind:'PANDAS',text:'Cleaned and merged three datasets and built scoring logic to rank TV shows.'},

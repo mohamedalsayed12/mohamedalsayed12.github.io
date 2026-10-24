@@ -1,4 +1,3 @@
-// Public preview: every name and figure is generic example data.
 const leads = [
   { id: 1, company: "Example Hotel", sector: "Hotel", area: "Area A", score: 85, status: "new", detail: "Opening soon", reasons: [[40, "Hotel opening"], [25, "Large site"], [20, "Good sector fit"]] },
   { id: 2, company: "Example Contractor", sector: "Contractor", area: "Area B", score: 78, status: "new", detail: "New project", reasons: [[35, "Project activity"], [25, "Sector fit"], [18, "Local delivery area"]] },

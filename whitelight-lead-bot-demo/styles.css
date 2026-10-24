@@ -30,7 +30,6 @@ button, a, input { font: inherit; }
 button { cursor: pointer; color: inherit; }
 p { margin: 0; }
 
-/* ---- Header ---- */
 
 .app-header {
   display: flex;
@@ -90,7 +89,6 @@ p { margin: 0; }
 .file-button { cursor: pointer; }
 .file-button:focus-within { outline: 2px solid #fff; outline-offset: 2px; }
 
-/* ---- Shared ---- */
 
 .page {
   width: min(1120px, calc(100% - 32px));
@@ -155,7 +153,6 @@ p { margin: 0; }
 .status-line { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .follow { font-size: 12px; color: var(--muted); }
 
-/* ---- My leads ---- */
 
 .leads-layout {
   display: grid;
@@ -286,7 +283,6 @@ p { margin: 0; }
 
 .note { color: var(--muted); font-size: 11px; margin-top: 8px; }
 
-/* ---- Weekly overview ---- */
 
 .overview h1 { margin: 0; font-size: 24px; }
 .caption { color: var(--muted); font-size: 13px; margin-top: 4px; }
@@ -381,14 +377,12 @@ tr.off td { color: var(--muted); font-style: italic; }
 
 .assign[disabled] { cursor: default; color: var(--green); border-color: #b7e4c7; background: #f1faf4; }
 
-/* ---- Phone ---- */
 
 @media (max-width: 900px) {
   .app-header { flex-wrap: wrap; padding: 10px 14px; }
   .nav { order: 3; width: 100%; }
   .page { width: calc(100% - 20px); margin-top: 12px; }
 
-  /* The salesman flow becomes two screens: the list, then one lead. */
   .leads-layout { grid-template-columns: 1fr; }
   .leads-layout.show-detail .list-panel,
   .leads-layout:not(.show-detail) .detail-panel { display: none; }
