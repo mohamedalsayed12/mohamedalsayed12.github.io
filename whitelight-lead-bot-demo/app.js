@@ -13,9 +13,9 @@ function badge(score, size = "") {
 }
 
 function header() {
-  return `<header class="app-header"><div class="brand"><span class="mark" aria-hidden="true"></span> WHITE LIGHT · LEADS</div>
+  return `<header class="app-header"><div class="brand"><span class="mark" aria-hidden="true"></span> WHITELIGHT · LEADS</div>
     <nav class="nav"><button data-action="view" data-view="leads" ${state.view === "leads" ? 'aria-current="page"' : ""}>My leads</button><button data-action="view" data-view="overview" ${state.view === "overview" ? 'aria-current="page"' : ""}>Weekly overview</button></nav>
-    <span class="sample-chip">PORTFOLIO DEMO · GENERIC DATA</span><a class="primary" href="../">Back to portfolio</a></header>`;
+    <span class="sample-chip">WHITELIGHT TRADING</span><a class="primary" href="../">Back to portfolio</a></header>`;
 }
 
 function leadCard(lead) {
