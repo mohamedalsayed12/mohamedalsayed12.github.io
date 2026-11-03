@@ -1,5 +1,8 @@
 const gh='https://github.com/mohamedalsayed12/';
 const featured=[
+ {repo:'onboarding-playbook-tracker',title:'Onboarding Playbook Tracker',kind:'BACKEND · FASTAPI',
+  text:'Multi-tenant customer onboarding API and dashboard: create accounts, invite users, move them through invited → activated → first_use → active with reusable playbooks, then surface stuck users and rollout summaries. Tenant isolation returns 404 not 403, argon2 passwords, hashed invite tokens, Redis summary cache invalidated after commit, Docker Compose, Alembic, mypy --strict and pytest against real Postgres in GitHub Actions.',
+  tags:['Python','FastAPI','PostgreSQL','Redis','Docker'],img:'images/onboarding-playbook-tracker.png',alt:'Rollout dashboard: stage funnel, role matrix and stuck users'},
  {repo:'whitelight-sales-bot',title:'White Light Sales & Lead Desk',kind:'REAL BUSINESS · FASTAPI',
   text:'Sales tool for White Light Trading, the Bahrain wholesale company where I interned. Tally Prime stays the source of truth: stock and invoice CSV imports, orders that reserve stock, PDF quotes, cheque tracking, credit holds, a CEO daily summary and a lead desk for managers and salesmen. Role-based access, Alembic migrations and 90+ pytest tests in GitHub Actions. The demo uses sample data.',
   tags:['Python','FastAPI','PostgreSQL','JavaScript'],demo:'whitelight-lead-bot-demo/'},
